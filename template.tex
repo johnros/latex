@@ -34,24 +34,34 @@
 
 
 
-\newcommand{\expect}[1]{E[#1]}
-\newcommand{\expectn}[1]{\mathbb{E}[#1]}
-\newcommand{\gauss}[1]{\mathcal{N}(#1)}
-\newcommand{\cdf}[2]{F_{#1}(#2)}
-\newcommand{\cdfn}[2]{\mathbb{F}_{#1}(#2)}
-\newcommand{\icdf}[2]{F^{-1}_{#1}(#2)}
-\newcommand{\icdfn}[2]{\mathbb{F}^{-1}_{#1}(#2)}
-\newcommand{\norm}[1]{\Vert #1 \Vert}
-\newcommand{\lik}{\mathcal{L}}
-\newcommand{\loglik}{L}
-\newcommand{\loss}{l}
-\newcommand{\risk}{R}
-\newcommand{\riskn}{\mathbb{R}}
-\newcommand{\deriv}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\expect}[1]{E[#1]} % population expectation
+\newcommand{\expectn}[1]{\mathbb{E}[#1]} % empirical expectation
+\newcommand{\gauss}[1]{\mathcal{N}(#1)} % normal distribution
+\newcommand{\cdf}[2]{F_{#1}(#2)} % population CDF
+\newcommand{\cdfn}[2]{\mathbb{F}_{#1}(#2)} %empirical CDF
+\newcommand{\icdf}[2]{F^{-1}_{#1}(#2)} % inverse CDF
+\newcommand{\icdfn}[2]{\mathbb{F}^{-1}_{#1}(#2)} % empirical ICDF
+\newcommand{\norm}[1]{\Vert #1 \Vert} % vector norm
+\newcommand{\lik}{\mathcal{L}} % likelihood function
+\newcommand{\loglik}{L} %loglikelihood function
+\newcommand{\loss}{l} % loss function
+\newcommand{\risk}{R} % population risk
+\newcommand{\riskn}{\mathbb{R}} % empirical risk
+\newcommand{\insample}{\bar{\risk}(\hat{\hyp})} % In sample average risk
+\newcommand{\deriv}[2]{\frac{\partial #1}{\partial #2}} 
 \newcommand{\argmin}[2]{argmin_{#1}\left\{ #2 \right\}}
-\newcommand{\hyp}{f}
-\newcommand{\hypclass}{\mathcal{F}}
+\newcommand{\hyp}{f} % hypothesis
+\newcommand{\hypclass}{\mathcal{F}} % hypothesis class
 \newcommand{\plane}{\mathbb{L}}
+\newcommand{\categories}{\mathcal{G}} % values of a categorical y
+\newcommand{\positive}[1]{\left[ #1 \right]_+} % the positive part function
+\newcommand{\kernel}{\mathcal{K}} 
+\newcommand{\featureS}{\mathcal{X}} % feature space
+\newcommand{\sample}{\tau} % data sample
+\newcommand{\test}{ERR_\sample} % test error
+\newcommand{\train}{\overline{err}} % train error
+\newcommand{\indicator}[1]{I_{\{ #1 \}}} % indicator function
+
 
 
 
