@@ -8,8 +8,14 @@
 \usepackage{amssymb}
 \usepackage{graphicx}
 \usepackage{amsthm}
-\usepackage{marginnote}
 \usepackage{natbib}
+\usepackage{algpseudocode}
+
+\usepackage{hyperref}
+\AtBeginDocument{\let\textlabel\label} % Deal with clashing between hyperref and label within align environment
+
+\usepackage{marginnote}
+\renewcommand*{\marginfont}{\footnotesize} 
 
 
 
@@ -20,7 +26,7 @@
 
 
 
-
+%%% Custom commands %%%
 \theoremstyle{plain}
 \newtheorem{thm}{Theorem}
 \newtheorem{lemma}{Lemma}
@@ -30,9 +36,6 @@
 \newtheorem{definition}{Definition}
 \newtheorem{remark}{Remark}
 \newtheorem{example}{Example}
-
-
-
 
 \newcommand{\expect}[1]{E[#1]} % population expectation
 \newcommand{\expectn}[1]{\mathbb{E}[#1]} % empirical expectation
