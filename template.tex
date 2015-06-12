@@ -27,63 +27,108 @@
 
 
 
+% Custom environments
 
 \theoremstyle{plain}
-\newtheorem{thm}{Theorem}
-\newtheorem{lemma}{Lemma}
-\newtheorem{prop}{Proposition}
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{lemma}{Lemma}[section]
+\newtheorem{prop}{Proposition}[section]
 
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}
-\newtheorem{remark}{Remark}
-\newtheorem{example}{Example}
+\newtheorem{definition}{Definition}[chapter]
+\newtheorem{remark}{Remark}[section]
+\newtheorem{example}{Example}[section]
+
+
+
 
 
 % Custom commands
 
 \newcommand{\naive}{na\"{\i}ve }
 \newcommand{\Naive}{Na\"{\i}ve }
+\newcommand{\andor}{and\textbackslash or }
+\newcommand{\erdos}{Erd\H{o}s }
+\newcommand{\renyi}{R\`enyi }
 
+
+\newcommand{\al}{\alpha}
+\newcommand{\be}{\beta}
 
 \newcommand{\set}[1]{\left\{ #1 \right\}} % A set
 \newcommand{\rv}[1]{\mathbf{#1}} % A random variable
 \newcommand{\x}{\rv x} % The random variable x 
-\newcommand{\y}{\rv y} % The random variable y
-\newcommand{\expect}[1]{\mathbf{E}\left[ \rv{#1} \right]} % The expectation operator
+\newcommand{\y}{\rv y} % The random variable x 
+\newcommand{\X}{\rv X} % The random variable x 
+\newcommand{\Y}{\rv Y} % The random variable y
+\newcommand{\expect}[1]{\mathbf{E}\left[ #1 \right]} % The expectation operator
 \newcommand{\expectg}[2]{\mathbf{E}_{\rv{#1}}\left[ \rv{#2} \right]} % An expectation w.r.t. a particular random variable.
 \newcommand{\expectn}[1]{\mathbb{E}\left[#1\right]} % The empirical expectation
+\newcommand{\cov}[1]{\mathbf{C}ov \left[ #1 \right]} % The expectation operator
+\newcommand{\covn}[1]{\mathbb{C}ov \left[ #1 \right]} % The expectation operator
 \newcommand{\gauss}[1]{\mathcal{N}\left(#1\right)} % The gaussian distribution
 \newcommand{\cdf}[2]{F_\rv{#1} (#2)} % The CDF function
 \newcommand{\cdfn}[2]{\mathbb{F}_{#1}(#2)} % The empirical CDF function
 \newcommand{\icdf}[2]{F_\rv{#1}^{-1} (#2)} % The invecrse CDF function
 \newcommand{\icdfn}[2]{\mathbb{F}^{-1}_{#1}(#2)} % The inverse empirical CDF function
 \newcommand{\pdf}{p} % The probability density function
+\newcommand{\prob}[1]{P\left( #1 \right)} % the probability of an event
 \newcommand{\dist}{P} % The proabaiblity distribution
+\newcommand{\entropy}{H} % entropy
+\newcommand{\mutual}[2]{I\left(#1;#2\right)} % mutual information
 
-\newcommand{\estim}[1]{\hat{\rv{#1}}} % An estimator
+\newcommand{\estim}[1]{\widehat{#1}} % An estimator
 
 \newcommand{\norm}[1]{\Vert #1 \Vert} % The norm operator
+\newcommand{\normII}[1]{\norm{#1}_2} % The norm operator
+\newcommand{\normI}[1]{\norm{#1}_1} % The norm operator
+\newcommand{\normF}[1]{\norm{#1}_{Frob}} % The Frobenius matrix norm
+\newcommand{\ones}{\textbf{1}} % Vector of ones.
 \newcommand{\lik}{\mathcal{L}} % The likelihood function
 \newcommand{\loglik}{L} % The log likelihood function
 \newcommand{\loss}{l} % A loss function
 \newcommand{\risk}{R} % The risk function
 \newcommand{\riskn}{\mathbb{R}} % The empirical risk
 \newcommand{\deriv}[2]{\frac{\partial #1}{\partial #2}} % A derivative
-\newcommand{\argmin}[2]{argmin_{#1}\set{#2}} % The argmin operator
+\newcommand{\argmin}[2]{\mathop{argmin} _{#1}\set{#2}} % The argmin operator
+\newcommand{\argmax}[2]{\mathop{argmax}_{#1}\set{#2}} % The argmin operator
 \newcommand{\hyp}{f} % A hypothesis
 \newcommand{\hypclass}{\mathcal{F}} % A hypothesis class
+\newcommand{\hilbert}{\mathcal{H}}
+\newcommand{\rkhs}{\hilbert_\kernel} % A hypothesis class
+\newcommand{\normrkhs}[1]{\norm{#1}_{\rkhs}} % the RKHS function norm
+
+
 \newcommand{\plane}{\mathbb{L}} % A hypoerplane
 \newcommand{\categories}{\mathcal{G}} % The categories set.
 \newcommand{\positive}[1]{\left[ #1 \right]_+} % The positive part function
 \newcommand{\kernel}{\mathcal{K}} % A kernel function
 \newcommand{\featureS}{\mathcal{X}} % The feature space
 \newcommand{\indicator}[1]{I_{\set{#1}}} % The indicator function.
-\newcommand{\similarity}{d} % A similarity measure.
+\newcommand{\reals}{\mathbb{R}} % the set of real numbers
+
+
+
+\newcommand{\latent}{\rv{s}} % latent variables matrix
+\newcommand{\latentn}{S} % latent variables matrix
+\newcommand{\loadings}{A} % factor loadings matrix
+\newcommand{\rotation}{R}  % rotation matrix
+\newcommand{\similaritys}{\mathfrak{S}} % a similarity graph
+\newcommand{\similarity}{s} % A similarity measure.
+\newcommand{\dissimilarity}{d} % A dissimilarity measure.
+\newcommand{\dissimilaritys}{\mathfrak{D}} % a dissimilarity graph
+\newcommand{\scalar}[2]{\left< #1,#2 \right>} % a scalar product
+
+
+
 \newcommand{\manifold}{\mathcal{M}} % A manifold.
 \newcommand{\project}{\hookrightarrow} % The orthogonal projection operator.
 \newcommand{\projectMat}{H} % A projection matrix.
 \newcommand{\rank}{q} % A subspace rank.
-
+\newcommand{\dimy}{K} % The dimension of the output.
+\newcommand{\encode}{E} % a linear encoding matrix
+\newcommand{\decode}{D} % a linear decoding matrix
+\DeclareMathOperator{\Tr}{Tr}
 \newcommand{\ensembleSize}{M} % Size of a hypothesis ensemble.
 \newcommand{\ensembleInd}{m} % Index of a hypothesis in an ensemble.
 
@@ -97,6 +142,30 @@
 \newcommand{\fold}{k} % Index of a fold
 \newcommand{\bootstraps}{B} % Bootstrap samples
 \newcommand{\bootstrap}{{b^*}} % Index of a bootstrap replication
+
+
+\newcommand{\rankings}{\mathcal{R}} % Rankings, for colaborative filtering.
+\newcommand{\ranking}{\mathcal{R}} % Rankings, for colaborative filtering.
+\newcommand{\kl}[2]{D_{KL}\left(#1 \Vert #2 \right)}
+\newcommand{\ortho}{\mathbb{O}} % space of orthogonal matrices
+
+\newcommand{\id}[6]{
+	\begin{tabular}{|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|p{2cm}|}
+	\hline Task & Type & Input & Output & Concept & Remark \\ 
+	\hline 
+	\hline #1 & #2 & #3 & #4 & #5 & #6 \\ 
+	\hline 
+	\end{tabular} 
+	\newline
+	\newline
+}
+
+\newcommand{\union}{\cup}
+\newcommand{\intersect}{\cap}
+\newcommand{\supp}[1]{\mathop{support}(#1)}
+\newcommand{\conf}[2]{\mathop{confidence}(#1 \Rightarrow #2)}
+\newcommand{\lift}[2]{\mathop{lift}(#1 \Rightarrow #2)}
+\newcommand{\convic}[2]{\mathop{conviction}(#1 \Rightarrow #2)}
 
 
 
