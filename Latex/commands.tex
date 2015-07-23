@@ -1,32 +1,3 @@
-\documentclass[12pt,a4paper]{article}
-
-
-
-\usepackage[utf8]{inputenc}
-\usepackage{amsmath}
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{graphicx}
-\usepackage{amsthm}
-\usepackage{natbib}
-\usepackage{algpseudocode}
-
-\usepackage{hyperref}
-\AtBeginDocument{\let\textlabel\label} % Deal with clashing between hyperref and label within align environment
-
-\usepackage{marginnote}
-\renewcommand*{\marginfont}{\footnotesize} 
-
-
-
-
-
-\author{Jonathan Rosenblatt}
-\title{The Title}
-
-
-
-
 % Custom environments
 
 \theoremstyle{plain}
@@ -35,9 +6,9 @@
 \newtheorem{prop}{Proposition}[section]
 
 \theoremstyle{definition}
-\newtheorem{definition}{Definition}[chapter]
-\newtheorem{remark}{Remark}[section]
-\newtheorem{example}{Example}[section]
+\newtheorem{definition}{Definition}
+\newtheorem{remark}{Remark}
+\newtheorem{example}{Example}
 
 
 
@@ -64,8 +35,8 @@
 \newcommand{\expect}[1]{\mathbf{E}\left[ #1 \right]} % The expectation operator
 \newcommand{\expectg}[2]{\mathbf{E}_{\rv{#1}}\left[ \rv{#2} \right]} % An expectation w.r.t. a particular random variable.
 \newcommand{\expectn}[1]{\mathbb{E}\left[#1\right]} % The empirical expectation
-\newcommand{\cov}[1]{\mathbf{C}ov \left[ #1 \right]} % The expectation operator
-\newcommand{\covn}[1]{\mathbb{C}ov \left[ #1 \right]} % The expectation operator
+\newcommand{\cov}[1]{\mathbf{Cov} \left[ #1 \right]} % The expectation operator
+\newcommand{\covn}[1]{\mathbb{Cov} \left[ #1 \right]} % The expectation operator
 \newcommand{\gauss}[1]{\mathcal{N}\left(#1\right)} % The gaussian distribution
 \newcommand{\cdf}[2]{F_\rv{#1} (#2)} % The CDF function
 \newcommand{\cdfn}[2]{\mathbb{F}_{#1}(#2)} % The empirical CDF function
@@ -166,14 +137,3 @@
 \newcommand{\conf}[2]{\mathop{confidence}(#1 \Rightarrow #2)}
 \newcommand{\lift}[2]{\mathop{lift}(#1 \Rightarrow #2)}
 \newcommand{\convic}[2]{\mathop{conviction}(#1 \Rightarrow #2)}
-
-
-
-\begin{document}
-
-\maketitle
-
-
-
-
-\end{document}

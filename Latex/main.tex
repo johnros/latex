@@ -1,0 +1,56 @@
+
+\documentclass[12pt,a4paper]{article}
+
+
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{amsthm}
+\usepackage[longnamesfirst]{natbib}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{framed}
+
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    citecolor=black,
+    filecolor=black,
+    urlcolor=black,
+}
+
+\AtBeginDocument{\let\textlabel\label}
+\usepackage{marginnote}
+\renewcommand*{\marginfont}{\scriptsize }
+\usepackage{thmtools} % for lists of theorems
+
+\input{commands}
+
+
+\author{Jonathan Rosenblatt}
+\title{Latex Template}
+
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+Content
+
+
+
+
+
+%%%%%%%%% Bibliography %%%%%%%%%%%
+\newpage
+\bibliographystyle{abbrvnat}
+\bibliography{bibtex_file}
+\label{sec:bibliography}
+
+
+\end{document}
